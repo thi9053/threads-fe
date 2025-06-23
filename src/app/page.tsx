@@ -1,5 +1,9 @@
-import Image from "next/image";
+import { DesktopLayout } from "@/components/layouts/desktop/MainLayout";
 
 export default function Home() {
-  return <h1>Home</h1>;
+  return (
+    <DesktopLayout>
+      <h1>hehe</h1>
+    </DesktopLayout>
+  );
 }

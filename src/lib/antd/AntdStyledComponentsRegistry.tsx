@@ -9,9 +9,8 @@ export const AntdStyledComponentsRegistry = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [cache] = React.useState(() => createCache()); // gets antd cached styles
+  const [cache] = React.useState(() => createCache());
 
-  // innsert cache style on the server
   useServerInsertedHTML(() => (
     <style
       id="antd"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "@/styles/all.css";
 import { ApolloWrapper } from "@/lib/apollo/apollo-wrapper";
+import { AntdStyledComponentsRegistry } from "@/lib/antd/AntdStyledComponentsRegistry";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -23,7 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.variable} antialiased`}>
-        <ApolloWrapper>{children}</ApolloWrapper>
+        <ApolloWrapper>
+          <AntdStyledComponentsRegistry>
+            {children}
+          </AntdStyledComponentsRegistry>
+        </ApolloWrapper>
       </body>
     </html>
   );
