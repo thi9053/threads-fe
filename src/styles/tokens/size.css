@@ -1,0 +1,7 @@
+@theme {
+  --sidebar-width: 76px;
+  --layout-max-width: 640px;
+  --feed-height: 60px;
+  --dropdown-appearance-width: 320px;
+  --header-height: 60px;
+}

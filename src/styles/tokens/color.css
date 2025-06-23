@@ -1,0 +1,10 @@
+@theme {
+  --color-icon-primary: rgb(0, 0, 0);
+  --color-icon-secondary: rgb(153, 153, 153);
+  --color-icon-navigation: rgb(184, 184, 184);
+
+  --background-primary: rgb(255, 255, 255);
+  --background-secondary: rgb(250, 250, 250);
+
+  --border-color-primary: rgb(213, 213, 213);
+}
