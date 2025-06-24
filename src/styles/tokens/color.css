@@ -5,6 +5,11 @@
 
   --background-primary: rgb(255, 255, 255);
   --background-secondary: rgb(250, 250, 250);
+  --background-tertiary: rgba(0, 0, 0, 0.04);
 
   --border-color-primary: rgb(213, 213, 213);
+
+  --color-divider: rgb(229, 229, 229);
+
+  --color-danger: rgb(255, 48, 64);
 }

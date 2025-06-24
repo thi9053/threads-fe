@@ -1,6 +1,7 @@
 import { Layout } from "antd";
 import { SidebarMenu } from "./SidebarMenu";
-import { AlignRight, AtSign } from "lucide-react";
+import { AtSign } from "lucide-react";
+import { MenuPopover } from "@/components/ui/popover/menu/MenuPopover";
 
 const { Sider } = Layout;
 
@@ -14,10 +15,7 @@ export const Sidebar = () => {
         <SidebarMenu />
         <div className="flex-none mb-[22px]">
           <div className="w-[54px] h-[54px] flex justify-center items-center cursor-pointer group">
-            <AlignRight
-              size={24}
-              className="group-hover:text-icon-primary text-icon-secondary duration-100"
-            />
+            <MenuPopover />
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@
   --sidebar-width: 76px;
   --layout-max-width: 640px;
   --feed-height: 60px;
-  --dropdown-appearance-width: 320px;
+  --popover-appearance-width: 320px;
+  --popover-menu-width: 240px;
   --header-height: 60px;
 }
