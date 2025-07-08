@@ -8,6 +8,7 @@ import { layoutSelectors } from "@/store/slices/layout-slice";
 import { MenuContent } from "./components/MenuContent";
 import { useMemo } from "react";
 import { AppearanceContent } from "./components/AppearanceContent";
+import { FeedContent } from "../feed/components/FeedContent";
 
 export const MenuPopover = () => {
   const { menuType, setMenuType } = useAppStore(useShallow(layoutSelectors));
@@ -15,6 +16,8 @@ export const MenuPopover = () => {
   const content = useMemo(() => {
     if (menuType === "appearance") {
       return <AppearanceContent />;
+    } else if (menuType === "feed") {
+      return <FeedContent type="menu" />;
     }
     return <MenuContent />;
   }, [menuType]);

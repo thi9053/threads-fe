@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "@/styles/all.css";
 import { ApolloWrapper } from "@/lib/apollo/apollo-wrapper";
-import { AntdStyledComponentsRegistry } from "@/lib/antd/AntdStyledComponentsRegistry";
+import { ThemeProvider } from "next-themes";
+import { ConfigProvider } from "antd";
+import "@ant-design/v5-patch-for-react-19";
+import { AntdRegistry } from "@ant-design/nextjs-registry";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -22,12 +25,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${roboto.variable} antialiased`}>
         <ApolloWrapper>
-          <AntdStyledComponentsRegistry>
-            {children}
-          </AntdStyledComponentsRegistry>
+          <ThemeProvider attribute="class">
+            <AntdRegistry>
+              <ConfigProvider>{children}</ConfigProvider>
+            </AntdRegistry>
+          </ThemeProvider>
         </ApolloWrapper>
       </body>
     </html>

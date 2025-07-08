@@ -11,3 +11,16 @@ export type DropdownMenuItems = {
 
 export type MenuItemType = (typeof MENU_ITEMS)[number];
 export type MenuSection = MenuItemType[];
+
+export type ThemeState = "light" | "dark" | "system";
+
+export type LayoutStatus = "loading" | "mobile" | "desktop";
+export type FeedOption = {
+  value: string;
+  label: string;
+};
+export type ThemeOption = {
+  value: ThemeState;
+  label: string;
+  icon?: React.ReactNode;
+};

@@ -34,6 +34,9 @@ export const MenuContent: FC<MenuContentProps> = () => {
       case "Apperance":
         setMenuType("appearance");
         break;
+      case "Feeds":
+        setMenuType("feed");
+        break;
     }
   };
 
